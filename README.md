@@ -1,2 +1,7 @@
 # iOS-Bankapp
-Repository for My iOS-Bankapp
+Repository for iOS-Bankapp
+
+-> Install Xcode
+-> git clone
+-> 
+
