@@ -13,16 +13,30 @@ class OnboardingViewController: UIViewController {
     let imageView = UIImageView()
     let label = UILabel()
     
+    let imageName: String
+    let titleText: String
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
         layout()
     }
+    
+    init(imageName: String, titleText: String) {
+        self.imageName = imageName
+        self.titleText = titleText
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension OnboardingViewController {
     func style() {
-        view.backgroundColor = .systemBackground // ! dont forget
+        view.backgroundColor = .systemBackground 
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -31,8 +45,7 @@ extension OnboardingViewController {
         // Image
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        var image = self.resizeImage(image: UIImage(named: "img2")!, targetSize: CGSizeMake(300, 300))
-//        image = self.cropImageToSquare(image: image)!
+        let image = self.resizeImageWithAspect(image: UIImage(named: imageName)!, scaledToMaxWidth: 300, maxHeight: 300)
         imageView.image = image
         
         // Label
@@ -41,7 +54,7 @@ extension OnboardingViewController {
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         label.adjustsFontForContentSizeCategory = true
         label.numberOfLines = 0
-        label.text = "The Bankey is faster, easier to use, and has old school look that will take you back to 1983."
+        label.text = titleText
     }
     
     func layout() {
@@ -58,57 +71,22 @@ extension OnboardingViewController {
         ])
     }
     
-    func cropImageToSquare(image: UIImage) -> UIImage? {
-        var imageHeight = image.size.height
-        var imageWidth = image.size.width
-
-        if imageHeight > imageWidth {
-            imageHeight = imageWidth
-        }
-        else {
-            imageWidth = imageHeight
-        }
-
-        let size = CGSize(width: imageWidth, height: imageHeight)
-
-        let refWidth : CGFloat = CGFloat(image.cgImage!.width)
-        let refHeight : CGFloat = CGFloat(image.cgImage!.height)
-
-        let x = (refWidth - size.width) / 2
-        let y = (refHeight - size.height) / 2
-
-        let cropRect = CGRect(x: x, y: y, width: size.height, height: size.width)
-        if let imageRef = image.cgImage!.cropping(to: cropRect) {
-            return UIImage(cgImage: imageRef, scale: 0, orientation: image.imageOrientation)
-        }
-
-        return nil
-    }
-    
-    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
-        let size = image.size
+    func resizeImageWithAspect(image: UIImage,scaledToMaxWidth width:CGFloat,maxHeight height :CGFloat)->UIImage? {
+        let oldWidth = image.size.width;
+        let oldHeight = image.size.height;
         
-        let widthRatio  = targetSize.width  / size.width
-        let heightRatio = targetSize.height / size.height
+        let scaleFactor = (oldWidth > oldHeight) ? width / oldWidth : height / oldHeight;
         
-        // Figure out what our orientation is, and use that to form the rectangle
-        var newSize: CGSize
-        if(widthRatio > heightRatio) {
-            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
-        } else {
-            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
-        }
+        let newHeight = oldHeight * scaleFactor;
+        let newWidth = oldWidth * scaleFactor;
+        let newSize = CGSize(width: newWidth, height: newHeight)
         
-        // This is the rect that we've calculated out and this is what is actually used below
-        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        UIGraphicsBeginImageContextWithOptions(newSize,false,UIScreen.main.scale);
         
-        // Actually do the resizing to the rect using the ImageContext stuff
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.draw(in: rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height));
+        let newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage
     }
 }
 

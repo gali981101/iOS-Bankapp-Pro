@@ -18,8 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
 //        window?.rootViewController = LoginViewController()
-//        window?.rootViewController = OnboardingContainerViewController()
-        window?.rootViewController = OnboardingViewController()
+        window?.rootViewController = OnboardingContainerViewController()
+//        window?.rootViewController = OnboardingViewController(imageName: "img1", titleText: "The Bankapp is faster, easier to use, and has old school look that will take you back to 1983.")
         
         return true
     }
