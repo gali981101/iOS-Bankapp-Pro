@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F31CC4612A45790600EA516E /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31CC4602A45790600EA516E /* UIViewController+Utils.swift */; };
+		F31CC4632A457E5E00EA516E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31CC4622A457E5E00EA516E /* MainViewController.swift */; };
 		F37770CE2A3FFBE600D1DF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37770CD2A3FFBE600D1DF33 /* AppDelegate.swift */; };
 		F37770D22A3FFBE600D1DF33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37770D12A3FFBE600D1DF33 /* LoginViewController.swift */; };
 		F37770D72A3FFBE700D1DF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37770D62A3FFBE700D1DF33 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F31CC4602A45790600EA516E /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		F31CC4622A457E5E00EA516E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F37770CA2A3FFBE600D1DF33 /* Bankapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37770CD2A3FFBE600D1DF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F37770D12A3FFBE600D1DF33 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -62,11 +66,12 @@
 		F37770CC2A3FFBE600D1DF33 /* Bankapp */ = {
 			isa = PBXGroup;
 			children = (
-				F38A2CFC2A435F83005FD03F /* Utils */,
-				F38A2CF52A4168C4005FD03F /* Onboarding */,
-				F37770E22A3FFEF500D1DF33 /* Login */,
 				F37770CD2A3FFBE600D1DF33 /* AppDelegate.swift */,
+				F37770E22A3FFEF500D1DF33 /* Login */,
+				F38A2CF52A4168C4005FD03F /* Onboarding */,
+				F38A2CFC2A435F83005FD03F /* Utils */,
 				F37770E12A3FFE9500D1DF33 /* Files */,
+				F31CC4622A457E5E00EA516E /* MainViewController.swift */,
 			);
 			path = Bankapp;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				F38A2CFD2A435FCA005FD03F /* LocalState.swift */,
+				F31CC4602A45790600EA516E /* UIViewController+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -178,11 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31CC4612A45790600EA516E /* UIViewController+Utils.swift in Sources */,
 				F37770E42A3FFF6E00D1DF33 /* LoginView.swift in Sources */,
 				F38A2CFE2A435FCA005FD03F /* LocalState.swift in Sources */,
 				F38A2CFB2A42F759005FD03F /* DummyViewController.swift in Sources */,
 				F37770D22A3FFBE600D1DF33 /* LoginViewController.swift in Sources */,
 				F38A2CF92A4173CC005FD03F /* OnboardingViewController.swift in Sources */,
+				F31CC4632A457E5E00EA516E /* MainViewController.swift in Sources */,
 				F37770CE2A3FFBE600D1DF33 /* AppDelegate.swift in Sources */,
 				F38A2CF72A41693A005FD03F /* OnboardingContainerViewController.swift in Sources */,
 			);
