@@ -61,9 +61,9 @@ struct CurrencyFormatter {
     }
     
     private func makeBalanceAttributed(dollars: String, cents: String) -> NSMutableAttributedString {
-        let dollarSignAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 0]
-        let dollarAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .body)]
-        let centAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .caption1), .baselineOffset: 4]
+        let dollarSignAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 4]
+        let dollarAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .title3)]
+        let centAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .footnote), .baselineOffset: 8]
         
         let rootString = NSMutableAttributedString(string: "$", attributes: dollarSignAttributes)
         let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)

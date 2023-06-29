@@ -93,8 +93,6 @@ class OnboardingContainerViewController: UIViewController {
     }
     
     private func layout() {
-        view.addSubview(nextButton)
-        view.addSubview(backButton)
         view.addSubview(closeButton)
         view.addSubview(doneButton)
         
