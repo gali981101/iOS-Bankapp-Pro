@@ -64,7 +64,7 @@ extension AccountSummaryCell {
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont(name: "Bodoni 72 Oldstyle Book", size: 17)
-        nameLabel.adjustsFontForContentSizeCategory = true
+        nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.text = "Account name"
         
         balanceStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,10 +74,12 @@ extension AccountSummaryCell {
         balanceLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceLabel.font = UIFont(name: "Bodoni 72 Oldstyle Book", size: 17)
         balanceLabel.textAlignment = .right
+        balanceLabel.adjustsFontSizeToFitWidth = true
         balanceLabel.text = "Some balance"
         
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceAmountLabel.textAlignment = .right
+        balanceAmountLabel.adjustsFontSizeToFitWidth = true
         balanceAmountLabel.text = "$XXX,XXX,XX"
         
         chevronImageView.translatesAutoresizingMaskIntoConstraints = false
