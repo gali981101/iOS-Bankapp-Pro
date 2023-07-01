@@ -17,6 +17,7 @@
 		F3369CD62A4DA043005AABC7 /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3369CD52A4DA043005AABC7 /* CurrencyFormatterTests.swift */; };
 		F3369CD82A4EAC7E005AABC7 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3369CD72A4EAC7E005AABC7 /* NSNotificationName.swift */; };
 		F3369CDC2A4EDF9E005AABC7 /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3369CDB2A4EDF9E005AABC7 /* UITextField+SecureToggle.swift */; };
+		F3369CDF2A500E69005AABC7 /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3369CDE2A500E69005AABC7 /* ShakeyBellView.swift */; };
 		F37770CE2A3FFBE600D1DF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37770CD2A3FFBE600D1DF33 /* AppDelegate.swift */; };
 		F37770D22A3FFBE600D1DF33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37770D12A3FFBE600D1DF33 /* LoginViewController.swift */; };
 		F37770D72A3FFBE700D1DF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37770D62A3FFBE700D1DF33 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		F3369CD52A4DA043005AABC7 /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		F3369CD72A4EAC7E005AABC7 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		F3369CDB2A4EDF9E005AABC7 /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
+		F3369CDE2A500E69005AABC7 /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		F37770CA2A3FFBE600D1DF33 /* Bankapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37770CD2A3FFBE600D1DF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F37770D12A3FFBE600D1DF33 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = BankappUnitTests;
 			sourceTree = "<group>";
 		};
+		F3369CDD2A500DBB005AABC7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F3369CDE2A500E69005AABC7 /* ShakeyBellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F37770C12A3FFBE600D1DF33 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +138,7 @@
 				F38A2CF52A4168C4005FD03F /* Onboarding */,
 				F31CC4642A46672500EA516E /* AccountSummary */,
 				F38A2CFC2A435F83005FD03F /* Utils */,
+				F3369CDD2A500DBB005AABC7 /* Components */,
 				F37770E12A3FFE9500D1DF33 /* Files */,
 			);
 			path = Bankapp;
@@ -312,6 +323,7 @@
 				F3369CC52A4D4FB3005AABC7 /* Decimal+Utils.swift in Sources */,
 				F3369CD82A4EAC7E005AABC7 /* NSNotificationName.swift in Sources */,
 				F37770D22A3FFBE600D1DF33 /* LoginViewController.swift in Sources */,
+				F3369CDF2A500E69005AABC7 /* ShakeyBellView.swift in Sources */,
 				F3CCE0B12A49547800442CFE /* AccountSummaryCell.swift in Sources */,
 				F38A2CF92A4173CC005FD03F /* OnboardingViewController.swift in Sources */,
 				F31CC4632A457E5E00EA516E /* MainViewController.swift in Sources */,
