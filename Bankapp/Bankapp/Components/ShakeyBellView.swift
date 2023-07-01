@@ -12,6 +12,10 @@ class ShakeyBellView: UIView {
     
     let imageView = UIImageView()
     
+    let buttonView = UIButton()
+    
+    let buttonHeight: CGFloat = 16
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -38,18 +42,36 @@ extension ShakeyBellView {
     func style() {
         translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        let image = UIImage(systemName: "bell.fill")!.withTintColor(.label, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "bell.fill")!.withTintColor(.label
+                                                                    , renderingMode: .alwaysOriginal)
         imageView.image = image
+        
+        buttonView.translatesAutoresizingMaskIntoConstraints = false
+        buttonView.backgroundColor = .systemRed
+        buttonView.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        buttonView.layer.cornerRadius = buttonHeight/2
+        buttonView.setTitle("9", for: .normal)
+        buttonView.setTitleColor(.white, for: .normal)
     }
     
     func layout() {
         addSubview(imageView)
+        addSubview(buttonView)
         
+        // ImageView
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 24),
             imageView.widthAnchor.constraint(equalToConstant: 24)
+        ])
+        
+        // Button
+        NSLayoutConstraint.activate([
+            buttonView.topAnchor.constraint(equalTo: imageView.topAnchor),
+            buttonView.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -9),
+            buttonView.widthAnchor.constraint(equalToConstant: 16),
+            buttonView.heightAnchor.constraint(equalToConstant: 16)
         ])
     }
 }
@@ -93,7 +115,7 @@ extension ShakeyBellView {
                 self.imageView.transform = CGAffineTransform.identity
             }
         },
-         completion: nil
+                                completion: nil
         )
     }
 }

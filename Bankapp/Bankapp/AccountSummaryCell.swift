@@ -64,6 +64,7 @@ extension AccountSummaryCell {
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont(name: "Bodoni 72 Oldstyle Book", size: 17)
+//        nameLabel.font = UIFont.preferredFont(forTextStyle: .body)
         nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.text = "Account name"
         
@@ -73,6 +74,7 @@ extension AccountSummaryCell {
         
         balanceLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceLabel.font = UIFont(name: "Bodoni 72 Oldstyle Book", size: 17)
+//        balanceLabel.font = UIFont.preferredFont(forTextStyle: .body)
         balanceLabel.textAlignment = .right
         balanceLabel.adjustsFontSizeToFitWidth = true
         balanceLabel.text = "Some balance"
