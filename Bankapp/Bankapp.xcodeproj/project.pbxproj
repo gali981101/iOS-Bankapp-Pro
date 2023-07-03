@@ -34,6 +34,8 @@
 		F3D111B32A52AA38001E3A90 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D111B22A52AA38001E3A90 /* AccountTests.swift */; };
 		F3D111B52A52C705001E3A90 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D111B42A52C705001E3A90 /* SkeletonLoadable.swift */; };
 		F3D111B72A52C91D001E3A90 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D111B62A52C91D001E3A90 /* SkeletonCell.swift */; };
+		F3D111BA2A5318D9001E3A90 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D111B92A5318D9001E3A90 /* ProfileManager.swift */; };
+		F3D111BC2A531C96001E3A90 /* AccountSummaryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D111BB2A531C96001E3A90 /* AccountSummaryViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		F3D111B22A52AA38001E3A90 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		F3D111B42A52C705001E3A90 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		F3D111B62A52C91D001E3A90 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
+		F3D111B92A5318D9001E3A90 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		F3D111BB2A531C96001E3A90 /* AccountSummaryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				F3189B922A517F6E0042CFD2 /* AccountSummaryViewController+Networking.swift */,
 				F3CCE0AE2A4952F800442CFE /* Header */,
 				F3CCE0AF2A49535B00442CFE /* Cells */,
+				F3D111B82A531886001E3A90 /* Networking */,
 			);
 			name = AccountSummary;
 			sourceTree = "<group>";
@@ -233,8 +238,17 @@
 			children = (
 				F3D111B02A52A8A8001E3A90 /* ProfileTests.swift */,
 				F3D111B22A52AA38001E3A90 /* AccountTests.swift */,
+				F3D111BB2A531C96001E3A90 /* AccountSummaryViewControllerTests.swift */,
 			);
 			path = AccountSummary;
+			sourceTree = "<group>";
+		};
+		F3D111B82A531886001E3A90 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F3D111B92A5318D9001E3A90 /* ProfileManager.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +356,7 @@
 				F3369CD62A4DA043005AABC7 /* CurrencyFormatterTests.swift in Sources */,
 				F3D111B32A52AA38001E3A90 /* AccountTests.swift in Sources */,
 				F3D111B12A52A8A8001E3A90 /* ProfileTests.swift in Sources */,
+				F3D111BC2A531C96001E3A90 /* AccountSummaryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +367,7 @@
 				F31CC4612A45790600EA516E /* UIViewController+Utils.swift in Sources */,
 				F3D111B72A52C91D001E3A90 /* SkeletonCell.swift in Sources */,
 				F3189B912A517CA20042CFD2 /* Date+Utils.swift in Sources */,
+				F3D111BA2A5318D9001E3A90 /* ProfileManager.swift in Sources */,
 				F37770E42A3FFF6E00D1DF33 /* LoginView.swift in Sources */,
 				F38A2CFE2A435FCA005FD03F /* LocalState.swift in Sources */,
 				F31CC4682A46AD2300EA516E /* AccountSummaryHeaderView.swift in Sources */,
