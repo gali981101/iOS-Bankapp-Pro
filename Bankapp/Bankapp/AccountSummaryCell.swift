@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
+enum AccountType: String, Codable {
+    case Banking
+    case CreditCard
+    case Investment
+}
+
 class AccountSummaryCell: UITableViewCell {
-    
-    enum AccountType: String {
-        case Banking
-        case CreditCard
-        case Investment
-    }
     
     struct ViewModel {
         let accountType: AccountType
@@ -60,11 +60,11 @@ extension AccountSummaryCell {
         typeLabel.text = "Account type"
         
         underlineView.translatesAutoresizingMaskIntoConstraints = false
-        underlineView.backgroundColor = .systemMint
+        underlineView.backgroundColor = .label
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont(name: "Bodoni 72 Oldstyle Book", size: 17)
-//        nameLabel.font = UIFont.preferredFont(forTextStyle: .body)
+//        nameLabel.font = UIFont.preferredFont(forTextStyle: .callout)
         nameLabel.adjustsFontSizeToFitWidth = true
         nameLabel.text = "Account name"
         
@@ -126,13 +126,10 @@ extension AccountSummaryCell {
         
         switch vm.accountType {
         case .Banking:
-            underlineView.backgroundColor = .systemMint
             balanceLabel.text = "Current balance"
         case .CreditCard:
-            underlineView.backgroundColor = .systemOrange
             balanceLabel.text = "Current balance"
         case .Investment:
-            underlineView.backgroundColor = .systemPurple
             balanceLabel.text = "Value"
         }
     }
